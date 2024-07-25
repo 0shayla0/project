@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+}
+
+#app {
+    height: 100%;
+}
+
+div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.slider-page {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.scroll-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+}
+
+.slider-item {
+    /* flex: 1; */
+    height: 100%;
+    flex-shrink: 0;
+}
+.slider-item > .inner {
+    height: 100%;
+}
+
+.main {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.lesson-table {
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left {
+    display: flex;
+    /* justify-content: space-between; */
+    font-size: 25px;
+    color: #3b4151;
+    /* width: 190px; */
+    width: 50%;
+    /* flex-shrink: 0; */
+    flex-direction: row;
+    /* flex: 1; */
+    align-items: center;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0;
+    padding-left: 10px;
+    flex-shrink: 0;
+    padding-right: 20px;
+}
+
+.icon {
+    /* margin-top: 25px; */
+    width: auto;
+}
+
+.right {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: flex-end;
+    /* width: 250px; */
+    font-size: 35px;
+    padding: 10px;
+    color: rgb(92, 92, 240);
+    flex-direction: row;
+    align-items: center;
+}
+
+.icons {
+    margin-top: 10px;
+}
+
+.btn {
+    width: 150px;
+    height: 60px;
+    font-size: 22px;
+    border-radius: 30px;
+    background-color: rgb(92, 92, 240);
+    color: white;
+    padding: 5px;
+    border: none;
+    margin-left: 20px;
+}
+
+.main {
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    /* 增加动画时长 */
+    animation-timing-function: ease-in;
+    /* 使用ease-in效果 */
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 92%
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+}
+
+th,
+td {
+    width: 10%;
+    border: none;
+    padding: 8px;
+    text-align: center;
+    font-size: 30px;
+}
+
+tr:first-child td:first-child {
+    width: 60px;
+    padding-right: 0px;
+    font-size: 28px;
+    font-weight: bold;
+    /* 调整这个值以改变第一个单元格的宽度 */
+}
+
+.data {
+    color: grey;
+}
+
+.mid {
+    border-radius: 50px;
+    height: 100%;
+}

@@ -1,0 +1,111 @@
+h3{
+    font-size: 60px;
+    width: 460px;
+    margin: 10px;
+    margin: 20px;
+}
+.title{
+    padding:0px;
+}
+.delete{
+    position: fixed;
+    left: 84%;
+    top: 0;
+    padding-top: 50px;
+    font-size: 45px;
+    font-weight: 600;
+    color: rgb(92, 92, 240);
+}
+input{
+    border-radius: 30px;
+    height: 100px;
+    background-color: rgb(231, 225, 225);
+    border: none;
+    width: 95%;
+    margin: 20px;
+    font-size: 40px;
+    padding-left: 30px;
+}
+.addpopup {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 50px;
+    padding: 30px;
+    background-color:rgb(241, 247, 250);
+    box-shadow: 20px 20px 100px 10px rgba(0, 0, 0, 0.3);
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(100%);
+    /* 初始位置在屏幕下方 */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* 最终位置在屏幕顶部 */
+    }
+}
+
+.overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.weeks{
+    font-size: 40px;
+    height: 120px;
+    margin: 6px;
+    width: 180px;
+    border-radius: 25px;
+    border:none;
+    background: rgb(231, 225, 225);
+}
+.changecolor{
+    font-size: 40px;
+    height: 120px;
+    margin: 6px;
+    width: 180px;
+    border-radius: 25px;
+    border: none;
+    background-color:rgb(92, 92, 240) ;
+    color:white
+}
+select{
+    font-size: 50px;
+    height: 120px;
+    margin: 6px;
+    width: 280px;
+    border-radius: 25px;
+    border: none;
+    background: rgb(231, 225, 225);
+}
+option{
+    font-size: small;
+}
+.btm{
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(92, 92, 240);
+    border-radius: 25px;
+    border: none;
+    font-size: 50px;
+    height: 180px;
+    width: 180px;
+}
