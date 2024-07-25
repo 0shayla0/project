@@ -1,6 +1,6 @@
 .popUp {
     width: 100%;
-    height: 35%;
+    min-height: 35%;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     font-size: 50px;
@@ -39,6 +39,8 @@
     align-items: flex-end; 
 }
 .desc{
+    flex-direction: row;
+    align-items: center;
     font-size: 40px;
     padding: 20px;
 }

@@ -192,12 +192,12 @@ const oSliderPage = useRef(null);
                 </table>
               </nav>
               {showPopup && LessonData.map((lesson, index) => {
-                if (lesson.attributes.name === info) {
+                if (pageIndex===0 && lesson.attributes.name === info) {
                   return <LessonDetail key={index} less={lesson} />;
                 }
                 return null;
               })}
-              {addPopup && <Addlist />}
+              {pageIndex === 0 && addPopup && <Addlist />}
             </div></div>
                 </div>
                 <div className="slider-item">
@@ -270,12 +270,12 @@ const oSliderPage = useRef(null);
                 </table>
               </nav>
               {showPopup && LessonData.map((lesson, index) => {
-                if (lesson.attributes.name === info) {
+                if (pageIndex===1 && lesson.attributes.name === info) {
                   return <LessonDetail key={index} less={lesson} />;
                 }
                 return null;
               })}
-              {addPopup && <Addlist />}
+              {pageIndex === 1 && addPopup && <Addlist />}
             </div></div>
                 </div>
                 

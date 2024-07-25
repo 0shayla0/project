@@ -5,7 +5,7 @@ import { faGreaterThan } from '@fortawesome/free-solid-svg-icons'
 
 const LessonDetail = (props) => {
     console.log("进入")
-    console.log({props})
+    console.log({ props })
     const [showPopup2, setShowPopup2] = useState(true);
 
     function getTime(starttime, endtime) {
@@ -17,47 +17,48 @@ const LessonDetail = (props) => {
         } else {
             return "Invalid input";
         }
-    } 
+    }
     if (props.less && props.less.attributes) {
-       
-        console.log(props.less.attributes.name);
-        const t = props.less.attributes.endtime-props.less.attributes.starttime
-    return (showPopup2 &&
-        (<div className="overlay" onClick={()=>{
-        setShowPopup2(false)      }}>
-        <div className='popUp'>
-        <h3>{props.less.attributes.name}</h3>
-        <div className='desc'>{props.less.attributes.place}
-        &nbsp;
-        <FontAwesomeIcon icon={faGreaterThan} />
-        &nbsp;&nbsp;&nbsp;
-        {props.less.attributes.teacher}</div>
-        <p><span>周期</span>
-        <span>{props.less.attributes.cycle}
-        &nbsp;
-        {`${t+1}节连上`}
-        </span>
-        </p>
-        <p>
-            <span>时间</span>
-            <span>
-            {props.less.attributes.week}
-            &nbsp;
-            {getTime(props.less.attributes.starttime, props.less.attributes.endtime)}
-            </span>
-        </p>
-        <p>
-            <span>课程类型</span>
-            <span>
-                {props.less.attributes.desc}
-            </span>
 
-        </p>
-    </div>
-    </div>
-  ) )// 输出name属性
-    } 
-  
+        console.log(props.less.attributes.name);
+        const t = props.less.attributes.endtime - props.less.attributes.starttime
+        return (showPopup2 &&
+            (<div className="overlay" style={{ 'flex-direction': 'column', 'justify-content': 'flex-end' }} onClick={() => {
+                setShowPopup2(false)
+            }}>
+                <div className='popUp'>
+                    <h3>{props.less.attributes.name}</h3>
+                    <div className='desc'>{props.less.attributes.place}
+                        &nbsp;
+                        <FontAwesomeIcon icon={faGreaterThan} />
+                        &nbsp;&nbsp;&nbsp;
+                        {props.less.attributes.teacher}</div>
+                    <p><span>周期</span>
+                        <span>{props.less.attributes.cycle}
+                            &nbsp;
+                            {`${t + 1}节连上`}
+                        </span>
+                    </p>
+                    <p>
+                        <span>时间</span>
+                        <span>
+                            {props.less.attributes.week}
+                            &nbsp;
+                            {getTime(props.less.attributes.starttime, props.less.attributes.endtime)}
+                        </span>
+                    </p>
+                    <p>
+                        <span>课程类型</span>
+                        <span>
+                            {props.less.attributes.desc}
+                        </span>
+
+                    </p>
+                </div>
+            </div>
+            ))// 输出name属性
+    }
+
 }
 
 export default React.memo(LessonDetail)
